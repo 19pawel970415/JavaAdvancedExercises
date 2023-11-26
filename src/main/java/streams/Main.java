@@ -1,8 +1,7 @@
-package Streams;
+package streams;
 
 import java.time.LocalDate;
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -257,7 +256,7 @@ public class Main {
         Product productClip = new Product("Clip", 2.49);
         Product productPuncher = new Product("Puncher", 0.79);
         Product productPaper = new Product("Paper", 9.99);
-        Product productScisors = new Product("Scisors", 0.99);
+        Product productScisors = new Product("Scissors", 0.99);
         Product productFlour = new Product("Flour", 1.39);
         Product productSugar = new Product("Sugar", 1.87);
         Product productChocolate = new Product("Chocolate", 1.99);
@@ -772,6 +771,154 @@ public class Main {
                 ));
 
         System.out.println(companiesInTheCity);
+// 11. Zwróć firmę która dokonała zakupów na największą kwotę
+
+        Optional<Company> maxBillCompany = companies.stream()
+                .max(Comparator.comparingDouble(company -> company.getPurchaseList().stream()
+                        .mapToDouble(purchase -> (purchase.getQuantity() * purchase.getProduct().getPrice()))
+                        .sum()));
+
+        if (maxBillCompany.isPresent()) {
+            System.out.println(maxBillCompany);
+        } else {
+            System.out.println("No company on the list");
+        }
+
+// 12. Zwróć firmę która kupiła najwięcej produktów za kwotę wyższą niż 10 k
+
+        Map<Double, List<Company>> firmOrFirmsBuyingGreatestNumOfProductsOver10k = companies.stream()
+                .collect(Collectors.groupingBy((company -> company.getPurchaseList().stream()
+                        .filter(purchase -> (purchase.getQuantity() * purchase.getProduct().getPrice()) > 10000)
+                        .mapToDouble(purchase -> purchase.getQuantity())
+                        .sum())));
+        System.out.println(firmOrFirmsBuyingGreatestNumOfProductsOver10k);
+
+// 13. *Zwróć miejscowość która wydała najwięcej pieniędzy. Stwórz mapę Map<String, Double> gdzie kluczem jest miejscowość, a wartością jest kwota wydana przez firmy pochodzące z tamtej miejscowości
+
+        Map<String, Double> cityExpenses = companies.stream()
+                .collect(Collectors.groupingBy(company -> company.getCityHeadquarters(),
+                        Collectors.summingDouble(company -> company.getPurchaseList().stream()
+                                .mapToDouble(purchase -> purchase.getQuantity() * purchase.getProduct().getPrice())
+                                .sum())));
+
+// 14. Wypisz firmy które 15 stycznia 2018 kupiły "Network Switch"
+
+        List<Company> companiesBuyingNetworkSwitchOn15012018 = companies.stream()
+                .filter(company -> company.getPurchaseList().stream()
+                        .anyMatch((purchase -> purchase.getProduct().getName().equals("Network Switch"))))
+                .filter(company -> company.getPurchaseList().stream()
+                        .anyMatch((purchase -> (purchase.getPurchaseDate().getYear() == 2018) && (purchase.getPurchaseDate().getMonthValue() == 1) && (purchase.getPurchaseDate().getDayOfMonth() == 15))))
+                .collect(Collectors.toList());
+
+        System.out.println(companiesBuyingNetworkSwitchOn15012018);
+
+// 15. Znajdź firmę która kupuje najwięcej kawy
+
+        Optional<Company> companyBuyingMaxCoffee = companies.stream()
+                .filter(company -> company.getPurchaseList().stream()
+                        .anyMatch(purchase -> purchase.getProduct().getName().contains("Coffee")))
+                .max(Comparator.comparingDouble(company -> company.getPurchaseList().stream()
+                        .filter(purchase -> purchase.getProduct().getName().contains("Coffee"))
+                        .mapToDouble(purchase -> purchase.getQuantity())
+                        .sum()));
+
+        if (companyBuyingMaxCoffee.isPresent()) {
+            System.out.println(companyBuyingMaxCoffee);
+        } else {
+            System.out.println("No company buys coffee");
+        }
+
+// 16. Wypisz ile łącznie zostało kupionej kawy Arabica w miesiącu styczniu
+
+        Double numOfArabica = companies.stream()
+                .filter(company -> company.getPurchaseList().stream()
+                        .anyMatch(purchase -> (purchase.getPurchaseDate().getMonthValue() == 1) && (purchase.getProduct().getName().contains("Arabica"))))
+                .map(Company::getPurchaseList)
+                .flatMap(Collection::stream)
+                .map(Purchase::getQuantity)
+                .reduce(Double.valueOf(0), (sum, quantity) -> sum + quantity);
+
+        System.out.println(numOfArabica);
+
+// 17. Wypisz ile łącznie kawy (Arabica i Roubsta) zostało kupionej w dni parzyste.
+
+        Double numOfArabicaRobustaBoughtOnEvenDays = companies.stream()
+                .filter(company -> company.getPurchaseList().stream()
+                        .anyMatch(purchase -> (purchase.getPurchaseDate().getDayOfMonth() % 2 == 0) &&
+                                ((purchase.getProduct().getName().contains("Arabica")) || (purchase.getProduct().getName().contains("Robusta")))))
+                .map(Company::getPurchaseList)
+                .flatMap(Collection::stream)
+                .map(Purchase::getQuantity)
+                .reduce(Double.valueOf(0), (sum, quantity) -> sum + quantity);
+
+        System.out.println(numOfArabicaRobustaBoughtOnEvenDays);
+
+// 18. Zwróć Mapę (Map<Product, Set<Company>>) w której kluczem jest typ kawy (powinny być dwie, Arabica i Robusta) i wartością są listy firm które kupiły podaną kawę chociaż raz.
+
+        Map<Product, Set<String>> coffeeAndCompanyBuyingIt = companies.stream()
+                .filter(company -> company.getPurchaseList().stream()
+                        .anyMatch(purchase -> purchase.getProduct().getName().contains("Coffee")))
+                .flatMap(company -> company.getPurchaseList().stream()
+                        .filter(purchase -> purchase.getProduct().getName().contains("Coffee"))
+                        .map(purchase -> Map.entry(purchase.getProduct(), company.getName())))
+                .collect(Collectors.groupingBy(
+                        Map.Entry::getKey,
+                        Collectors.mapping(Map.Entry::getValue, Collectors.toSet())));
+
+        System.out.println(coffeeAndCompanyBuyingIt);
+
+// 19. Zwróć firmę która w styczniu kupiła najwięcej paliwa (ropy)
+
+        Optional<Company> companyBuyingMaxOil = companies.stream()
+                .filter(company -> company.getPurchaseList().stream()
+                        .anyMatch(purchase -> purchase.getProduct().getName().contains("oil")))
+                .max(Comparator.comparingDouble(company -> company.getPurchaseList().stream()
+                        .filter(purchase -> purchase.getProduct().getName().contains("oil"))
+                        .mapToDouble(purchase -> purchase.getQuantity())
+                        .sum()));
+
+        if (companyBuyingMaxOil.isPresent()) {
+            System.out.println(companyBuyingMaxCoffee);
+        } else {
+            System.out.println("No company buys oil");
+        }
+
+// 20. Zwróć firmę której proporcja wydanych pieniędzy do ilości pracowników jest najwyższa
+
+        Optional<Company> maxMoneyWithRegardToNumOfEmpls = companies.stream()
+                .max(Comparator.comparingDouble((company -> company.getPurchaseList().stream()
+                        .mapToDouble(purchase -> (purchase.getQuantity() * purchase.getProduct().getPrice()))
+                        .sum() / company.getEmployees())));
+
+        System.out.println(maxMoneyWithRegardToNumOfEmpls);
+
+
+// 21. Zwróć firme która najwięcej wydaje na artykuły biurowe
+
+        Optional<Company> maxSpentOnOfficeSupplies = companies.stream()
+                .filter(company -> company.getPurchaseList().stream()
+                        .anyMatch(purchase ->
+                                (purchase.getProduct().getName().equals("Pen")) ||
+                                        (purchase.getProduct().getName().equals("Pencil")) ||
+                                        (purchase.getProduct().getName().equals("Clip")) ||
+                                        (purchase.getProduct().getName().equals("Puncher")) ||
+                                        (purchase.getProduct().getName().equals("Paper")) ||
+                                        (purchase.getProduct().getName().equals("Scissors"))))
+                .max(Comparator.comparingDouble(company -> company.getPurchaseList().stream()
+                        .filter(purchase -> purchase.getProduct().getName().equals("Pen") ||
+                                (purchase.getProduct().getName().equals("Pencil")) ||
+                                (purchase.getProduct().getName().equals("Clip")) ||
+                                (purchase.getProduct().getName().equals("Puncher")) ||
+                                (purchase.getProduct().getName().equals("Paper")) ||
+                                (purchase.getProduct().getName().equals("Scissors")))
+                        .map(purchase -> (purchase.getQuantity() * purchase.getProduct().getPrice()))
+                        .reduce(Double.valueOf(0), (sum, expense) -> sum + expense)));
+
+        if (maxSpentOnOfficeSupplies.isPresent()) {
+            System.out.println(maxSpentOnOfficeSupplies);
+        } else {
+            System.out.println("No company buys office supplies");
+        }
 
     }
 }
