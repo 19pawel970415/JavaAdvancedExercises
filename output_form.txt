@@ -1,0 +1,14 @@
+Name: 
+Paul
+Surname: 
+Smith
+Age: 
+20
+Gender (enter M or W): 
+MALE
+Salary: 
+2128.0
+Living in a flat (enter YES or NO)): 
+NO
+Student (enter YES or NO): 
+YES

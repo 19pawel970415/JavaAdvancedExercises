@@ -1,4 +1,4 @@
-package files;
+package files.writing;
 
 import java.io.File;
 import java.io.FileWriter;
