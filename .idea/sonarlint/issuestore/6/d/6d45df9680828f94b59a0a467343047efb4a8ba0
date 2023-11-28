@@ -1,0 +1,16 @@
+
+J
+java:S1128	"4Remove this unused import 'java.util.stream.Stream'.(ó÷”
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÿéúÿÿÿÿ
+J
+java:S6212"/Declare this local variable with "var" instead.(ù ƒ‘üÿÿÿÿ
+J
+java:S6212"/Declare this local variable with "var" instead.(à°Œ²ûÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¹ùÖ¯şÿÿÿÿ
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(½¦ÜÎ8Èâ–…Á1
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(ßşßøÿÿÿÿ8ß´˜…Á1
+U	java:S106*"9Replace this use of System.out or System.err by a logger.(‰Ä¬õ8ºß™…Á1
+U	java:S106."9Replace this use of System.out or System.err by a logger.(ùÚ‚¿8œÒš…Á1
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(Üóğšùÿÿÿÿ8 è›…Á1
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(åœ³Ë8¿ÿ…Á1
+Z	java:S106;"9Replace this use of System.out or System.err by a logger.(ƒ¬«›úÿÿÿÿ8Æ¸Ÿ…Á1

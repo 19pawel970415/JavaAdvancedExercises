@@ -1,0 +1,73 @@
+
+m
+java:S1450"RRemove the "age" field and declare it as a local variable in the relevant methods.(Æ†´¦şÿÿÿÿ
+i
+java:S1450"SRemove the "ageQ" field and declare it as a local variable in the relevant methods.(Â‡¢
+n
+java:S1450"XRemove the "firstName" field and declare it as a local variable in the relevant methods.(š„¦¿
+o
+java:S1450
+"YRemove the "firstNameQ" field and declare it as a local variable in the relevant methods.(ø»Â
+p
+java:S1450"URemove the "gender" field and declare it as a local variable in the relevant methods.(ŠÔŞ»ıÿÿÿÿ
+l
+java:S1450"VRemove the "genderQ" field and declare it as a local variable in the relevant methods.(ÿì·ï
+o
+java:S1450"YRemove the "isAStudent" field and declare it as a local variable in the relevant methods.(§¸‹Í
+p
+java:S1450"ZRemove the "isAStudentQ" field and declare it as a local variable in the relevant methods.(š¾â‰
+q
+java:S1450"[Remove the "livesInAFlat" field and declare it as a local variable in the relevant methods.(¥ØŸÕ
+r
+java:S1450"\Remove the "livesInAFlatQ" field and declare it as a local variable in the relevant methods.(Ğá÷
+k
+java:S1450"URemove the "salary" field and declare it as a local variable in the relevant methods.(·í–
+q
+java:S1450"VRemove the "salaryQ" field and declare it as a local variable in the relevant methods.(Ô¹ğ…øÿÿÿÿ
+q
+java:S1450"VRemove the "surname" field and declare it as a local variable in the relevant methods.(—‡¨åûÿÿÿÿ
+r
+java:S1450"WRemove the "surnameQ" field and declare it as a local variable in the relevant methods.(ƒË‰úÿÿÿÿ
+E
+java:S6212""/Declare this local variable with "var" instead.(®á¿†
+E
+java:S6212$"/Declare this local variable with "var" instead.(Üóò´
+N	java:S106&"9Replace this use of System.out or System.err by a logger.(ÇìĞ
+J
+java:S6212'"/Declare this local variable with "var" instead.(ù ƒ‘üÿÿÿÿ
+E
+java:S6212)"/Declare this local variable with "var" instead.( î¦Ê
+N	java:S1061"9Replace this use of System.out or System.err by a logger.( öÚÒ
+E
+java:S62122"/Declare this local variable with "var" instead.(¬çöé
+E
+java:S62124"/Declare this local variable with "var" instead.( î¦Ê
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(ô“ı
+J
+java:S6212="/Declare this local variable with "var" instead.(©Â³Şşÿÿÿÿ
+E
+java:S6212?"/Declare this local variable with "var" instead.( î¦Ê
+N	java:S106G"9Replace this use of System.out or System.err by a logger.(°»ÉÇ
+E
+java:S6212H"/Declare this local variable with "var" instead.(¬·›Ş
+E
+java:S6212O"/Declare this local variable with "var" instead.( î¦Ê
+S	java:S106W"9Replace this use of System.out or System.err by a logger.(Õÿ øÿÿÿÿ
+D
+java:S6212X"/Declare this local variable with "var" instead.(´ş„
+E
+java:S6212Z"/Declare this local variable with "var" instead.( î¦Ê
+N	java:S106b"9Replace this use of System.out or System.err by a logger.(ıâÄô
+E
+java:S6212c"/Declare this local variable with "var" instead.(ê›Ü
+E
+java:S6212j"/Declare this local variable with "var" instead.( î¦Ê
+S	java:S106r"9Replace this use of System.out or System.err by a logger.(¹®óÀÿÿÿÿÿ
+E
+java:S6212s"/Declare this local variable with "var" instead.(¯åÁÕ
+E
+java:S6212z"/Declare this local variable with "var" instead.( î¦Ê
+F
+java:S1068"0Remove this unused "livesInAFlat" private field.(¥ØŸÕ
+D
+java:S1068".Remove this unused "isAStudent" private field.(§¸‹Í
