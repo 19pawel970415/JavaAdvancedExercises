@@ -1,6 +1,6 @@
-package collections;
+package collections.groupOne;
 
-import static collections.Lottery.play;
+import static collections.groupOne.Lottery.play;
 
 public class MainExercise3 {
 

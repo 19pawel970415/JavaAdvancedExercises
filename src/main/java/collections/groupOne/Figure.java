@@ -1,4 +1,4 @@
-package collections;
+package collections.groupOne;
 
 public abstract class Figure implements Comparable<Figure> {
 

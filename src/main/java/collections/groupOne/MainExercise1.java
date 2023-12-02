@@ -1,4 +1,4 @@
-package collections;
+package collections.groupOne;
 
 import java.util.ArrayList;
 import java.util.HashSet;

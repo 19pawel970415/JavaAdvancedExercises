@@ -1,14 +1,14 @@
-package collections;
+package collections.groupOne;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class Rectangle extends Figure{
+public class Square extends Figure{
+
     private double a;
-    private double b;
 
     @Override
     public double countArea() {
-        return a * b;
+        return a * a;
     }
 }
