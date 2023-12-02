@@ -55,3 +55,15 @@ W
 output_form.txt,c\1\c1c1d3761c7536e3366a4dd17e70ee16562ad5ab
 ^
 .src/main/java/files/reading/MainExercise5.java,4\a\4a9c736e12b5d494add8653405690d7cfac3331b
+^
+.src/main/java/files/reading/MainExercise1.java,f\0\f02337b6edc6c8d1d3f9872e87bd3b727d5cb869
+8
+file.txt,5\4\5436437fa01a7d3e41d46741da54b451446774ca
+X
+(src/main/java/threads/MainExercise1.java,a\f\afb49fdae7a9c1d3eb2dafa98154cff6b70146bd
+X
+(src/main/java/threads/MainExercise2.java,4\2\42a024cbf5a37e81aa0cdc7f50bee208f75aebef
+X
+(src/main/java/threads/MainExercise4.java,9\b\9ba6e76b19683998019ee2bdde3dbf1049ae0ffc
+Z
+*src/main/java/threads/ThreadExercise1.java,2\9\2928319c8461d4a2a73734c41cafc1e1bfd964ac
