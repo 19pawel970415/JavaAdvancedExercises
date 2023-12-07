@@ -135,16 +135,12 @@ e
 +src/main/java/OOP/exercises/ex3/Circle.java,a\0\a0bbf3ae5ea20e73a1a0060f4a0e2e6cf110edc3
 [
 +src/main/java/OOP/exercises/ex4/Circle.java,2\0\207864d82c1269cab56c80af4f0687d3b8372d8d
-U
-%src/main/java/generics/Container.java,3\4\34ca53e7ba35491c402e563a6c0b17931b1b6722
 _
 /src/main/java/exceptions/InputMismatchMain.java,1\a\1ad15e782d74cea856112d4712555b5c046626dc
 ]
 -src/main/java/OOP/exercises/ex2/Lecturer.java,a\0\a0f33957c215afb775cf6a8c17581609a27dd8a6
 Y
 )src/main/java/OOP/exercises/ex5/Line.java,f\7\f7d2223c9cb714c11c13cfc480ccb82de494eb09
-P
- src/main/java/generics/Main.java,b\1\b142405cc17e671f806ee3adff4a40b31e46b4f8
 b
 2src/main/java/OOP/exercises/ex1/MainExercise1.java,3\e\3eb097ffeb8295e822d74ae07ae92660696fa090
 b
@@ -177,8 +173,6 @@ Z
 *src/main/java/OOP/exercises/ex3/Shape.java,9\8\981b3f7943585762a81a1944cfd7731bfdb26b53
 Z
 *src/main/java/OOP/exercises/ex4/Shape.java,9\b\9b566f24e97597e34a1f64540b38b556e2ee1010
-P
- src/main/java/generics/Shoe.java,5\8\582bcdfda85737be51786bde5ccdf614c2d07d7c
 [
 +src/main/java/OOP/exercises/ex3/Square.java,f\a\faaa6a320729e0fe9523e1189de13e777ab09d27
 [
