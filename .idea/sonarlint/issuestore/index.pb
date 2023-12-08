@@ -3,20 +3,8 @@ I
 JavaAdvancedExercises.iml,5\7\57f2cad2c761c0d8ce5cf5ba4f217e777434aed6
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-Q
-!src/main/java/streams/Person.java,9\d\9d11965aa89769ee27cf90eb9dea25251cab8fc1
-U
-%src/main/java/streams/Programmer.java,d\1\d135b2ea8053646097ff36b408f44698214fbbd8
-O
-src/main/java/streams/UNIT.java,4\d\4df0b6cd3422bec98b35e42a21150b1a38590cb1
-S
-#src/main/java/streams/Purchase.java,e\3\e3ddfc80751d1fd76ba5099771ea0d960de0cfe3
 R
 "src/main/java/streams/Company.java,5\9\5995ef66f1e8bb1190ee4b1507e97c8cdd687d93
-O
-src/main/java/streams/Main.java,c\6\c6d81861ea43191e2fef53eac798f8ae496242cf
-R
-"src/main/java/streams/Product.java,1\d\1de4ffceb94cb31c6aff77c205cde02c6e756406
 U
 %src/main/java/files/writing/Form.java,1\1\112130e6d31054cbfbe3eb6b0c338153d81bec82
 8

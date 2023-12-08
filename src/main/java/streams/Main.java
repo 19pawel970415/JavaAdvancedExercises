@@ -920,5 +920,13 @@ public class Main {
             System.out.println("No company buys office supplies");
         }
 
+// 22. Zwróć firmy posortowane po ilości wydanych pieniędzy na paliwo
+        List<Company> sortedByFuelExpensesCompanies = companies.stream()
+                .sorted(Comparator.comparingDouble(company -> company.getPurchaseList().stream()
+                        .filter(p -> p.getProduct().getName().contains("Fuel"))
+                        .mapToDouble(p -> (p.getQuantity() * p.getProduct().getPrice()))
+                        .sum()))
+                .collect(Collectors.toList());
+        System.out.println(sortedByFuelExpensesCompanies);
     }
 }
