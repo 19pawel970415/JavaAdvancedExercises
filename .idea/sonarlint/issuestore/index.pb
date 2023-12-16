@@ -72,8 +72,6 @@ a
 e
 5src/main/java/collections/groupTwo/MainExercise6.java,d\0\d0995ba8c2a70c84acd3e02336a544384938362e
 [
-+src/main/java/OOP/exercises/ex3/Circle.java,a\0\a0bbf3ae5ea20e73a1a0060f4a0e2e6cf110edc3
-[
 +src/main/java/OOP/exercises/ex4/Circle.java,2\0\207864d82c1269cab56c80af4f0687d3b8372d8d
 _
 /src/main/java/exceptions/InputMismatchMain.java,1\a\1ad15e782d74cea856112d4712555b5c046626dc
@@ -181,8 +179,6 @@ T
 $src/main/java/enums/ex1/Weekday.java,2\7\27949ea4cb75428bd92f3ad667a5f59cae2e6720
 j
 :src/main/java/collections/exercises/ex1/MainExercsie1.java,a\3\a34632c82e802d6248b2535be1b370ba759ed1b2
-h
-8src/main/java/collections/exercises/ex1/MyArrayList.java,7\4\74aba823d52f398a04493953a82049c6a1836921
 b
 2src/main/java/collections/exercises/ex2/Genre.java,9\b\9b06af45171c4e25e28696fcce5158e402ca7709
 c
@@ -300,7 +296,27 @@ S
 #src/main/java/streams/Purchase.java,e\3\e3ddfc80751d1fd76ba5099771ea0d960de0cfe3
 U
 %src/main/java/streams/Programmer.java,d\1\d135b2ea8053646097ff36b408f44698214fbbd8
-R
-"src/main/java/streams/Product.java,1\d\1de4ffceb94cb31c6aff77c205cde02c6e756406
 Q
 !src/main/java/streams/Person.java,9\d\9d11965aa89769ee27cf90eb9dea25251cab8fc1
+O
+src/main/java/streams/Main.java,c\6\c6d81861ea43191e2fef53eac798f8ae496242cf
+Z
+*src/main/java/threads/ThreadExercise1.java,2\9\2928319c8461d4a2a73734c41cafc1e1bfd964ac
+X
+(src/main/java/threads/MainExercise5.java,2\1\21c242e09613a7ac81f27272c1f3445fcd02a01e
+X
+(src/main/java/threads/MainExercise4.java,9\b\9ba6e76b19683998019ee2bdde3dbf1049ae0ffc
+X
+(src/main/java/threads/MainExercise3.java,0\8\08ce6a8c596633ca1be451a1a750207065455aab
+X
+(src/main/java/threads/MainExercise2.java,4\2\42a024cbf5a37e81aa0cdc7f50bee208f75aebef
+X
+(src/main/java/threads/MainExercise1.java,a\f\afb49fdae7a9c1d3eb2dafa98154cff6b70146bd
+_
+/src/main/java/threads/exercises/ex2/Bridge.java,1\2\1280d308937e6cff1968cf2bab11855490b7c2b6
+\
+,src/main/java/threads/exercises/ex2/Car.java,8\7\879e7afd8b5b32c3431a1df770ca2961dff3d441
+f
+6src/main/java/threads/exercises/ex1/MainExercise1.java,4\5\4576e5a3eda2ded5dd0302658ddb729f11185153
+f
+6src/main/java/threads/exercises/ex2/MainExercise2.java,7\1\71ae768b517fcaf2e0cda2e310507c5ff61844dc
